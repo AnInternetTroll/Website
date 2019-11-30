@@ -27,7 +27,7 @@
     <!-- Navbar -->
     <nav class='navbar navbar-expand-lg navbar-dark bg-primary sticky-top'>
         <a class='navbar-brand' href='#'>
-            <img src='../Dickbutt steve.png' width='40' height='57' class='d-inline-block align-top' alt=''>
+            <img src='../media/Dickbutt steve.png' width='40' height='57' class='d-inline-block align-top' alt=''>
         </a>
         <a class='navbar-brand' href='#'>Luca's website</a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
