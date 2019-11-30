@@ -14,9 +14,6 @@
 <?php include 'include/ip.php';?>
     <link rel="stylesheet" type="text/css" href="../include/main.css">
     <style type="text/css">
-    li .kilder {
-        background-color: #111111;
-    }
 
     .article {
         position: static;
