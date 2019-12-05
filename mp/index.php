@@ -68,10 +68,9 @@
             <div class="col-sm-12">
                 <div class='article'>
                     <br />
-                    <h1>Future of email, no email</h1>
-                    <p>Do u MP?</p>
-                    <p>This message was brought to you by a robot that's evolving, be scared, <strong>fear</strong></p>
-                    <iframe width="1024" height="576" src="https://www.youtube.com/embed/v4hIHqclL2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="max-height:100vh; width: 100vh; "></iframe>
+                    <h1>Carrie's war review</h1>
+                    <p>I guess idk what this is</p>
+                    <iframe width="1024" height="576" src="https://www.youtube.com/embed/k4rZaRY4dSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <!-- End -->
                 </div>
             </div>
