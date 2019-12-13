@@ -21,10 +21,9 @@ if ($_POST) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- -->
-<?php include 'include/ip.php';?>
+    <?php include 'include/ip.php';?>
     <link rel="stylesheet" type="text/css" href="../include/main.css">
     <style type="text/css">
-
     .article {
         position: static;
         line-height: 1.6;
@@ -85,11 +84,11 @@ if ($_POST) {
                     <!--Comments-->
                     <hr>
                     <h1>Comments</h1>
-                    <form action="" method="POST">
-                        Name: <br><input type="text" name="name"><br>
-                        Comment: <br><textarea rows="5" cols="20" name="Comment"></textarea><br>
-                        <input type="submit" name="Post comment">
-
+                    <form action="" method="POST" class="form-inline">
+                        Name: <br><input type="text" name="name" class="form-control mb-2 mr-sm-2">
+                        Comment: <br><input name="Comment" class="form-control mb-2 mr-sm-2"><br>
+                        <!--<input type="submit" name="Post comment">-->
+                        <button type="submit" name="Post comment" class="btn btn-primary mb-2">Submit</button>
                     </form>
                     <hr>
                     <h2>Other comments</h2>
