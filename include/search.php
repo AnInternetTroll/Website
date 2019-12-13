@@ -67,8 +67,8 @@
                     <br />
                     <?php
 
-$norsk = file_get_contents('../norsk/index.php');//IMAGINE THIS IS REALLY HOME.PHP
-$norskurl = "../norsk/index.php";
+$norsk = file_get_contents('../archive/norsk/index.php');//IMAGINE THIS IS REALLY HOME.PHP
+$norskurl = "../archive/norsk/index.php";
 
 function get_title($url){
   $str = file_get_contents($url);

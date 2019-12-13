@@ -1,3 +1,13 @@
+<?php 
+//Commenting code
+if ($_POST) {
+    $name = $_POST['name'];
+    $Comment = $_POST['Comment'];
+    $handle= fopen("comments.php", "a");
+    fwrite($handle, "<b><i>".$name."</b></i> Said: <br />".$Comment. "<br />" );
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -55,7 +65,7 @@
                 </li>
             </ul>
             <form class='form-inline my-2 my-lg-0' action='../include/search.php' method='post'>
-                <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe' placeholder="Broken :(">
+                <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe'>
                 <button class='btn btn-success' type='submit'>Search</button>
             </form>
         </div>
@@ -72,6 +82,21 @@
                     <br />
                     <h1>Luca's server</h1>
                     <p>idk what this is, it's just my personal PC brodcasting to the world</p>
+                    <!--Comments-->
+                    <hr>
+                    <h1>Comments</h1>
+                    <form action="" method="POST">
+                        Name: <br><input type="text" name="name"><br>
+                        Comment: <br><textarea rows="5" cols="20" name="Comment"></textarea><br>
+                        <input type="submit" name="Post comment">
+
+                    </form>
+                    <hr>
+                    <h2>Other comments</h2>
+                    <?php 
+                        include "comments.php"
+                    ?>
+                    <br>
                 </div>
             </div>
         </div>
