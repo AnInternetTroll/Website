@@ -84,11 +84,11 @@ if ($_POST) {
                     <!--Comments-->
                     <hr>
                     <h1>Comments</h1>
-                    <form action="" method="POST" class="form-inline">
-                        Name: <br><input type="text" name="name" class="form-control mb-2 mr-sm-2">
-                        Comment: <br><input name="Comment" class="form-control mb-2 mr-sm-2"><br>
+                    <form action="" method="POST" class="form-group">
+                        Name: <br><input type="text" name="name" class="form-control mb-2 mr-sm-2" placeholder="Your name, or someone elses, I don't care">
+                        Comment: <br><textarea name="Comment" class="form-control mb-2 mr-sm-2" placeholder="Write something"></textarea><br>
                         <!--<input type="submit" name="Post comment">-->
-                        <button type="submit" name="Post comment" class="btn btn-primary mb-2">Submit</button>
+                        <button type="submit" name="Post comment" class="btn btn-outline-primary">Submit</button>
                     </form>
                     <hr>
                     <h2>Other comments</h2>
