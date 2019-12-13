@@ -4,7 +4,7 @@ if ($_POST) {
     $name = $_POST['name'];
     $Comment = $_POST['Comment'];
     $handle= fopen("comments.php", "a");
-    fwrite($handle, "<b><i>".$name."</b></i> Said: <br />".$Comment. "<br />" );
+    fwrite($handle, "<b><i>".strip_tags($name)."</b></i> Said: <br />".strip_tags($Comment). "<br />" );
 }
 
 ?>
