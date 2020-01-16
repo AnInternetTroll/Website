@@ -1,10 +1,13 @@
 <?php 
+require "include/Parsedown.php";
+$Parsedown = new Parsedown();
+$Parsedown->setSafeMode(true);
 //Commenting code
 if ($_POST) {
-    $name = $_POST['name'];
-    $Comment = $_POST['Comment'];
-    $handle= fopen("comments.php", "a");
-    fwrite($handle, "<b><i>".strip_tags($name)."</b></i> Said: <br />".strip_tags($Comment). "<br />" );
+    $name =  htmlspecialchars($_POST['name']);
+    $Comment = $Parsedown->text($_POST['Comment']);
+    $handle= fopen("comments.php", "a+");
+    fwrite($handle, '<div class="card text-white bg-secondary mb-3"><div class="card-header">'.$name.'</div><div class="card-body"><p class="card-text">'.$Comment. "</p></div></div><br />" );
 }
 
 ?>
@@ -22,7 +25,7 @@ if ($_POST) {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- -->
     <?php include 'include/ip.php';?>
-    <link rel="stylesheet" type="text/css" href="../include/main.css">
+    <link rel="stylesheet" type="text/css" href="include/main.css">
     <style type="text/css">
     .article {
         position: static;
@@ -33,7 +36,7 @@ if ($_POST) {
     <!-- Navbar -->
     <nav class='navbar navbar-expand-lg navbar-dark bg-primary sticky-top'>
         <a class='navbar-brand' href='#'>
-            <img src='../../media/Dickbutt steve.png' width='40' height='57' class='d-inline-block align-top' alt=''>
+            <img src='media/Dickbutt steve.png' width='40' height='57' class='d-inline-block align-top' alt=''>
         </a>
         <a class='navbar-brand' href='#'>Luca's website</a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
@@ -93,13 +96,12 @@ if ($_POST) {
                     <hr>
                     <h2>Other comments</h2>
                     <?php 
-                        include "comments.php"
+                        include "comments.php";
                     ?>
                     <br>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <br />
 </body>
