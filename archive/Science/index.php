@@ -1,3 +1,17 @@
+<!-- Comments -->
+<?php
+include "include/Parsedown.php";
+$Parsedown = new Parsedown();
+$Parsedown->setSafeMode(true);
+//Commenting code
+if ($_POST) {
+    $name=htmlspecialchars($_POST['name']);
+    $Comment=$Parsedown->text($_POST['Comment']);
+    $handle=fopen("comments.php", "a+");
+    fwrite($handle, '<div class="card text-white bg-dark mb-3"><div class="card-header">'.$name.'</div><div class="card-body"><p class="card-text">'.$Comment."</p></div></div><br />");
+}
+
+?>
 <!DOCTYPE html>
 <html>
 

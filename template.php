@@ -1,3 +1,17 @@
+<!-- Comments -->
+<?php
+include "include/Parsedown.php";
+$Parsedown = new Parsedown();
+$Parsedown->setSafeMode(true);
+//Commenting code
+if ($_POST) {
+    $name=htmlspecialchars($_POST['name']);
+    $Comment=$Parsedown->text($_POST['Comment']);
+    $handle=fopen("comments.php", "a+");
+    fwrite($handle, '<div class="card text-white bg-dark mb-3"><div class="card-header">'.$name.'</div><div class="card-body"><p class="card-text">'.$Comment."</p></div></div><br />");
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,13 +26,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- -->
     <?php include 'include/ip.php';?>
-    <link rel="stylesheet" type="text/css" href="../include/main.css">
+    <link rel="stylesheet" type="text/css" href="include/main.css">
     <style type="text/css">
+    .article {
+        position: static;
+        line-height: 1.6;
+        font-size: 15px;
+    }
     </style>
     <!-- Navbar -->
     <nav class='navbar navbar-expand-lg navbar-dark bg-primary sticky-top'>
         <a class='navbar-brand' href='#'>
-            <img src='../../media/Dickbutt steve.png' width='40' height='57' class='d-inline-block align-top' alt=''>
+            <img src='media/Dickbutt steve.png' width='40' height='57' class='d-inline-block align-top' alt=''>
         </a>
         <a class='navbar-brand' href='#'>Luca's website</a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
@@ -27,33 +46,34 @@
         <div class='collapse navbar-collapse' id='navbarSupportedContent'>
             <ul class='navbar-nav mr-auto'>
                 <li class='nav-item'>
-                    <a class='nav-link' href='../../index.php'>Home <span class='sr-only'>(current)</span></a>
+                    <a class='nav-link' href='index.php'>Home <span class='sr-only'>(current)</span></a>
                 </li>
                 <li class='nav-item'>
-                    <a class='nav-link' href='../../about/index.php'>About me</a>
+                    <a class='nav-link' href='about/index.php'>About me</a>
                 </li>
                 <li class='nav-item dropdown'>
-                    <a class='nav-link dropdown-toggle ' href='../archive/index.php' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                    <a class='nav-link dropdown-toggle ' href='archive/index.php' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                         Archive
                     </a>
                     <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
-                        <a class='dropdown-item ' href='../../archive/index.php'>Archive home</a>
+                        <a class='dropdown-item ' href='archive/index.php'>Archive home</a>
                         <div class='dropdown-divider'></div>
-                        <a class='dropdown-item' href='../../archive/Norsk/'>Norsk</a>
-                        <a class='dropdown-item' href='../../archive/English/'>English</a>
-                        <a class='dropdown-item' href='../../archive/science/'>Science</a>
+                        <a class='dropdown-item' href='archive/Norsk/'>Norsk</a>
+                        <a class='dropdown-item' href='archive/English/'>English</a>
+                        <a class='dropdown-item' href='archive/science/'>Science</a>
                     </div>
                 </li>
                 <li class='nav-item'>
                     <a class='nav-link disabled' href='#' tabindex='-1' aria-disabled='true'>Secret</a>
                 </li>
             </ul>
-            <form class='form-inline my-2 my-lg-0' action='../include/search.php' method='post'>
-                <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe' placeholder="Broken :(">
+            <form class='form-inline my-2 my-lg-0' action='include/search.php' method='post'>
+                <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe'>
                 <button class='btn btn-success' type='submit'>Search</button>
             </form>
         </div>
-    </nav> <!-- End of Navbar -->
+    </nav>
+    <!-- End of Navbar -->
     <!-- Article -->
 
 <body>
@@ -62,12 +82,36 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class='article'>
+                    <div class="wordy">
+                        <br />
+                        <?php 
+                        $Parsedown->setSafeMode(false);
+
+                        $myfile = fopen("article.md", "r");
+                        $filestuff = fread($myfile,filesize("article.md"));
+                        $content = $Parsedown->text($filestuff);
+                        echo $content;
+                        fclose($myfile);
+                        ?>
+                    </div>
                     <br />
-                    <!--Text here-->
+                    <!--Comments-->
+                    <hr>
+                    <h1>Comments</h1>
+                    <form action="" method="POST" class="form-group">
+                        Name: <br><input type="text" name="name" class="form-control mb-2 mr-sm-2" placeholder="Your name, or someone elses, I don't care" required>
+                        Comment: <br><textarea name="Comment" class="form-control mb-2 mr-sm-2" placeholder="Write something" required></textarea><br>
+                        <!--<input type="submit" name="Post comment">-->
+                        <button type="submit" name="Post comment" class="btn btn-outline-primary">Submit</button>
+                    </form>
+                    <hr>
+                    <h2>Other comments</h2>
+                    <?php
+                    include "comments.php";
+                    ?>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <br />
 </body>
