@@ -17,45 +17,7 @@
 
 
     </style>
-    <!-- Navbar -->
-    <nav class='navbar navbar-expand-lg navbar-dark bg-primary sticky-top'>
-        <a class='navbar-brand' href='#'>
-            <img src='../../media/Dickbutt steve.png' width='40' height='57' class='d-inline-block align-top' alt=''>
-        </a>
-        <a class='navbar-brand' href='#'>Luca's website</a>
-        <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-            <span class='navbar-toggler-icon'></span>
-        </button>
-        <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-            <ul class='navbar-nav mr-auto'>
-                <li class='nav-item'>
-                    <a class='nav-link' href='../../index.php'>Home <span class='sr-only'>(current)</span></a>
-                </li>
-                <li class='nav-item'>
-                    <a class='nav-link' href='../../about/index.php'>About me</a>
-                </li>
-                <li class='nav-item dropdown'>
-                    <a class='nav-link dropdown-toggle ' href='../archive/index.php' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                        Archive
-                    </a>
-                    <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
-                        <a class='dropdown-item ' href='../../archive/index.php'>Archive home</a>
-                        <div class='dropdown-divider'></div>
-                        <a class='dropdown-item' href='../../archive/Norsk/'>Norsk</a>
-                        <a class='dropdown-item' href='../../archive/English/'>English</a>
-                        <a class='dropdown-item' href='../../archive/science/'>Science</a>
-                    </div>
-                </li>
-                <li class='nav-item'>
-                    <a class='nav-link disabled' href='#' tabindex='-1' aria-disabled='true'>Secret</a>
-                </li>
-            </ul>
-            <form class='form-inline my-2 my-lg-0' action='../include/search.php' method='post'>
-                <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe' placeholder="Broken :(">
-                <button class='btn btn-success' type='submit'>Search</button>
-            </form>
-        </div>
-    </nav><!-- End of Navbar -->
+<?php include "nav.php"?>
     <!-- Article -->
 
 <body>
@@ -66,34 +28,45 @@
                 <div class='article'>
                     <br />
                     <?php
+                    <?php
+// Assuming the above tags are at www.example.com
+$tags = get_meta_tags('http://www.example.com/');
 
-$norsk = file_get_contents('../archive/norsk/index.php');//IMAGINE THIS IS REALLY HOME.PHP
-$norskurl = "../archive/norsk/index.php";
-
-function get_title($url){
-  $str = file_get_contents($url);
-  if(strlen($str)>0){
-    $str = trim(preg_replace('/\s+/', ' ', $str)); // supports line breaks inside <title>
-    preg_match("/\<title\>(.*)\<\/title\>/i",$str,$title); // ignore case
-    return $title[1];
-  }
-}
-
-
-
-$search = $_POST['findMe'];
-//$search = "example";//THIS WOULD WORK, BUT I WAS SHOWING HOW TO USE FORM
-
-
-//IF WORD FOUND IN HOME PAGE
-if (stripos($norsk, $search) !== false) {//USING EXAMPLE.COM TO SHOW IT WORKS
-    echo '<h2><a href="'.$norskurl.'">'.get_title($norskurl).'</a></h2><br />';
-}
-
-
-
-
+// Notice how the keys are all lowercase now, and
+// how . was replaced by _ in the key.
+echo $tags['author'];       // name
+echo $tags['keywords'];     // php documentation
+echo $tags['description'];  // a php manual
+echo $tags['geo_position']; // 49.33;-86.59
 ?>
+
+
+function get_title($url)
+{
+    $str = file_get_contents($url);
+    if (strlen($str) > 0) {
+        $str = trim(preg_replace('/\s+/', ' ', $str)); // supports line breaks inside <title>
+        preg_match("/\<title\>(.*)\<\/title\>/i", $str, $title); // ignore case
+        return $title[1];
+    }
+}
+
+$links = array('../archive/Norsk/index.php', '../archive/Science/index.php', '../home/index.php');
+
+function resaults($urls)
+{
+    foreach ($urls as $key) {
+        $search = $_POST['findMe'];
+        if (stripos(file_get_contents($key), $search) !== false) {
+//USING EXAMPLE.COM TO SHOW IT WORKS
+            echo '<h2><a href="' . $key . '">' . get_title($key) . '</a></h2><br />';
+        }
+    }
+}
+resaults($links);
+?>
+
+
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@
 
         body {
             background-color: #323233;
+            overscroll-behavior-y: contain;
         }
 
         .col-sm-12 {
@@ -15,6 +16,7 @@
 
         body {
             background-color: #ffffff;
+                        overscroll-behavior-y: contain;
         }
 
         .col-sm-12 {
@@ -27,6 +29,7 @@
 
         body {
             background-color: #ffffff;
+                        overscroll-behavior-y: contain;
         }
 
         .col-sm-12 {

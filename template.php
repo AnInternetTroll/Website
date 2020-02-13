@@ -1,6 +1,6 @@
-<!-- Comments -->
 <?php
-include "include/Parsedown.php";
+$root = $_SERVER['DOCUMENT_ROOT'];
+include $root . "/Website/include/Parsedown.php";
 $Parsedown = new Parsedown();
 $Parsedown->setSafeMode(true);
 //Commenting code
@@ -34,46 +34,7 @@ if ($_POST) {
         font-size: 15px;
     }
     </style>
-    <!-- Navbar -->
-    <nav class='navbar navbar-expand-lg navbar-dark bg-primary sticky-top'>
-        <a class='navbar-brand' href='#'>
-            <img src='media/Dickbutt steve.png' width='40' height='57' class='d-inline-block align-top' alt=''>
-        </a>
-        <a class='navbar-brand' href='#'>Luca's website</a>
-        <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-            <span class='navbar-toggler-icon'></span>
-        </button>
-        <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-            <ul class='navbar-nav mr-auto'>
-                <li class='nav-item'>
-                    <a class='nav-link' href='index.php'>Home <span class='sr-only'>(current)</span></a>
-                </li>
-                <li class='nav-item'>
-                    <a class='nav-link' href='about/index.php'>About me</a>
-                </li>
-                <li class='nav-item dropdown'>
-                    <a class='nav-link dropdown-toggle ' href='archive/index.php' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                        Archive
-                    </a>
-                    <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
-                        <a class='dropdown-item ' href='archive/index.php'>Archive home</a>
-                        <div class='dropdown-divider'></div>
-                        <a class='dropdown-item' href='archive/Norsk/'>Norsk</a>
-                        <a class='dropdown-item' href='archive/English/'>English</a>
-                        <a class='dropdown-item' href='archive/science/'>Science</a>
-                    </div>
-                </li>
-                <li class='nav-item'>
-                    <a class='nav-link disabled' href='#' tabindex='-1' aria-disabled='true'>Secret</a>
-                </li>
-            </ul>
-            <form class='form-inline my-2 my-lg-0' action='include/search.php' method='post'>
-                <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe'>
-                <button class='btn btn-success' type='submit'>Search</button>
-            </form>
-        </div>
-    </nav>
-    <!-- End of Navbar -->
+    <?php include $root."/Website/include/nav.php"; ?>
     <!-- Article -->
 
 <body>
@@ -109,6 +70,7 @@ if ($_POST) {
                     <?php
                     include "comments.php";
                     ?>
+                    <br />
                 </div>
             </div>
         </div>

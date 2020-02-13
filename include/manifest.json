@@ -1,0 +1,16 @@
+{
+    "start_url": "/Website/home/",
+    "name": "Luca's Website",
+    "manifest_version": 2,
+    "background_color": "#4a4a4d",
+    "theme_color": "#007bff",
+    "short_name": "Luca",
+    "display": "standalone",
+    "description": "App for stuff idk.",
+    "lang": "en",
+    "icons": [{
+        "src": "/Website/media/dickbutt_192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }]
+}
