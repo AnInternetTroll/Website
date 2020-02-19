@@ -2,7 +2,7 @@
 <?php 
 $current_file_name = $_SERVER['REQUEST_URI'];
 ?>
-    <nav class='navbar navbar-expand-lg navbar-dark bg-primary sticky-top'>
+    <nav class='navbar sticky-top navbar-expand-lg navbar-dark bg-primary'>
         <a class='navbar-brand' href='#'>
             <img src='/Website/media/Dickbutt steve.png' width='40' height='57' class='d-inline-block align-top' alt=''>
         </a>
@@ -34,6 +34,18 @@ $current_file_name = $_SERVER['REQUEST_URI'];
                     <a class='nav-link disabled' href='#' tabindex='-1' aria-disabled='true'>Secret</a>
                 </li>
             </ul>
+              <form class="form-inline">
+    <button class="btn btn-outline-primary" type="button" style="cursor: default !important;">
+        <dark-mode-toggle
+      id="dark-mode-toggle-1"
+      legend=""
+      appearance="toggle"
+      dark=""
+      light=""
+      style=""
+  ></dark-mode-toggle>
+</button>
+</form>
             <form class='form-inline my-2 my-lg-0' action='/Website/include/search.php' method='post'>
                 <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe'>
                 <button class='btn btn-success' type='submit'>Search</button>
@@ -41,3 +53,5 @@ $current_file_name = $_SERVER['REQUEST_URI'];
         </div>
     </nav>
     <!-- End of Navbar -->
+
+    

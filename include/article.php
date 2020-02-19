@@ -1,4 +1,3 @@
-<div class='article'>
 <br />
 <?php
 $Parsedown->setSafeMode(false);
@@ -9,4 +8,3 @@ $content   = $Parsedown->text($filestuff);
 echo $content;
 fclose($myfile);
 ?>
-</div>

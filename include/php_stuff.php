@@ -2,7 +2,7 @@
 //Depricated for privacy reasons, not like you should even use this
 
 /*
-$file = "ipaddresses.txt"; //turns the text file into a variable
+$file = $root."/Website/ipaddresses.txt"; //turns the text file into a variable
 $f=fopen($file, 'a+'); //opens up the text file for reading and writing
 fwrite($f,"\n--"."Date:".date("l jS \of F Y h:i:s A")."\nIP: ".$_SERVER['REMOTE_ADDR']."\nHOSTNAME: ".gethostbyaddr($_SERVER['REMOTE_ADDR'])."\n"); //writes the IP address to ipaddresses.txt
 fclose($f); //closes ipaddresses.txt for reading and writing
@@ -27,15 +27,19 @@ if ($_POST) {
     // Write stuff, then add the previous stuff at the end
     $handle  = fopen("comments.php", "w");
     fwrite($handle, '
-    	<div class="card text-white bg-dark mb-3">
+        <div class="cardyly">
+    	<div>
     		<div class="card-header">' . $name . '</div>
     		<div class="card-body">
     			<p class="card-text">' . $Comment . "</p>
     		</div>
     	</div>
+        </div>
     		<br />
     		".$contents);
+    fclose($handle);
 }
-fclose($handle);
+
+
 
 ?>

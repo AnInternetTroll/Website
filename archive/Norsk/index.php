@@ -5,14 +5,15 @@ include $root . '/Website/include/php_stuff.php';?>
 
 <head>
 
-    <meta property="og:description" content="Norsk leksa fra 2019" />
-    <meta property="og:locale" content="en_GB" />
-    <meta property="og:site_name" content="Luca" />
-    <meta property="og:image" content="/Website/media/dickbutt.png" />
-    <link rel="manifest" href="/Website/include/manifest.json">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="og:title" content="Luca's Website"/>
+    <meta name="og:description" property="og:description" content="Spraak histories." />
+    <meta name="og:locale" property="og:locale" content="en_GB" />
+    <meta name="og:site_name" property="og:site_name" content="Norsk" />
+    <meta name="og:image" property="og:image" content="/Website/media/dickbutt.png" />
+    <meta name="article" property="article" content="/Website/archive/Norsk/article.md" />
+    <meta name="og:url" content="/Website/archive/Norsk/" />
 
-    <title>Home</title>
+    <title>Norsk</title>
 
     <?php include $root . "/Website/include/includes.php";?>
     <!-- -->
@@ -70,10 +71,12 @@ include $root . '/Website/include/php_stuff.php';?>
                             <li class="list-group-item"><a href="https://snl.no/moderne_norsk">Modern Norsk</a></li>
                         </ul>
                     </ul>
+
+                <?php include $root."/Website/include/comments_html.php" ?>
+                
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <br />
 </body>
