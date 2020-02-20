@@ -1,5 +1,5 @@
          <!-- Navbar -->
-<?php 
+<?php
 $current_file_name = $_SERVER['REQUEST_URI'];
 ?>
     <nav class='navbar sticky-top navbar-expand-lg navbar-dark bg-primary'>
@@ -12,22 +12,22 @@ $current_file_name = $_SERVER['REQUEST_URI'];
         </button>
         <div class='collapse navbar-collapse' id='navbarSupportedContent'>
             <ul class='navbar-nav mr-auto'>
-                <li <?php if (strpos($current_file_name, 'home') !== false) {echo "class='nav-item active'";} else {echo "class='nav-item'";} ?>>
+                <li <?php if (strpos($current_file_name, 'home') !== false) {echo "class='nav-item active'";} else {echo "class='nav-item'";}?>>
                     <a class='nav-link' href='/Website/home/'>Home <span class='sr-only'>(current)</span></a>
                 </li>
-                <li <?php if (strpos($current_file_name, 'about') !== false) {echo "class='nav-item active'";} else {echo "class='nav-item'";} ?>>
+                <li <?php if (strpos($current_file_name, 'about') !== false) {echo "class='nav-item active'";} else {echo "class='nav-item'";}?>>
                     <a class='nav-link' href='/Website/about/index.php'>About me</a>
                 </li>
-                <li <?php if (strpos($current_file_name, 'archive') !== false) {echo "class='nav-item dropdown active'";} else {echo "class='nav-item dropdown'";} ?>>
+                <li <?php if (strpos($current_file_name, 'archive') !== false) {echo "class='nav-item dropdown active'";} else {echo "class='nav-item dropdown'";}?>>
                     <a class='nav-link dropdown-toggle ' href='/Website/archive/index.php' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                         Archive
                     </a>
                     <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
-                        <a <?php if (strpos($current_file_name, 'archive/index.php') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";} ?> href='/Website/archive/index.php'>Archive home</a>
+                        <a <?php if (strpos($current_file_name, 'archive/index.php') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/index.php'>Archive home</a>
                         <div class='dropdown-divider'></div>
-                        <a <?php if (strpos($current_file_name, 'Norsk') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";} ?> href='/Website/archive/Norsk/'>Norsk</a>
-                        <a <?php if (strpos($current_file_name, 'english') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item disabled'";} ?> href='/Website/archive/English/'>English</a>
-                        <a <?php if (strpos($current_file_name, 'Science') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";} ?> href='/Website/archive/Science/'>Science</a>
+                        <a <?php if (strpos($current_file_name, 'Norsk') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/Norsk/'>Norsk</a>
+                        <a <?php if (strpos($current_file_name, 'english') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item disabled'";}?> href='/Website/archive/English/'>English</a>
+                        <a <?php if (strpos($current_file_name, 'Science') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/Science/'>Science</a>
                     </div>
                 </li>
                 <li class='nav-item'>
@@ -54,4 +54,4 @@ $current_file_name = $_SERVER['REQUEST_URI'];
     </nav>
     <!-- End of Navbar -->
 
-    
+

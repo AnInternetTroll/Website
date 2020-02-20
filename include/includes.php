@@ -17,8 +17,7 @@
     <!-- Awesome fonts
     <script src="https://kit.fontawesome.com/17e04acadb.js" crossorigin="anonymous"></script>
     -->
-
-
+    <!-- Dark and Light stylesheets -->
     <link rel="stylesheet" href="/Website/include/dark.css" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="/Website/include/light.css" media="(prefers-color-scheme: light)">
     <!-- The main stylesheet -->

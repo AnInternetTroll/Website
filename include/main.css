@@ -1,18 +1,15 @@
 :root {
-    color-scheme:light dark;
+    color-scheme: light dark;
 }
-
 body {
     background-color: var(--background-color);
     overscroll-behavior-y: contain;
 }
-
 .col-sm-12 {
     background-color: var(--article-background-color);
     box-shadow: 5px 10px 8px 10px #111111;
     color: var(--color);
 }
-
 .article {
     position: static;
     line-height: 1.6;

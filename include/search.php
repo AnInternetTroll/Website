@@ -5,7 +5,7 @@ include $root . '/Website/include/php_stuff.php';?>
 
 <head>
     <title>Home</title>
-    <?php include $root."/Website/include/includes.php"; ?>
+    <?php include $root . "/Website/include/includes.php";?>
 
     <!-- -->
     <link rel="stylesheet" type="text/css" href="../include/main.css">
@@ -51,16 +51,15 @@ $links = array('../archive/Norsk/index.php',
     $root . '/Website/archive/Science/index.php',
     '../home/index.php');
 
-
 foreach ($links as $key) {
     //Get what the user searches for
     $search = $_POST['findMe'];
     //get meta tags names
-    $tagsLink= get_meta_tags($root.'/Website/home/index.php');
+    $tagsLink =  get_meta_tags($root . '/Website/home/index.php');
     //link to article.md
     $article = $tagsLink['article'];
     //Tags for name, url and description
-    $title = $tagsLink['og:site_name'];
+    $title       = $tagsLink['og:site_name'];
     $linkToThing = $tagsLink['og:url'];
     $description = $tagsLink['og:description'];
     //if article.md has what the user is searching for then give back the resault
@@ -68,7 +67,6 @@ foreach ($links as $key) {
         echo '<h2><a href="' . $linkToThing . '">' . $title . '</a></h2><br />';
     } else {echo "Nothing";}
 }
-
 
 ?>
 

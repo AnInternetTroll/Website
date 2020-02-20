@@ -72,8 +72,8 @@ include $root . '/Website/include/php_stuff.php';?>
                         </ul>
                     </ul>
 
-                <?php include $root."/Website/include/comments_html.php" ?>
-                
+                <?php include $root . "/Website/include/comments_html.php"?>
+
                 </div>
             </div>
         </div>
