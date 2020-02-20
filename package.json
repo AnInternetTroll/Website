@@ -2,19 +2,21 @@
     "name": "website",
     "description": "A website",
     "version": "0.1.0",
-    "main": "",
     "repository": {
         "type": "git",
         "url": "https://github.com/AnInternetTroll/Website.git"
     },
-    "dependencies": {
-        "jquery/jquery": "4.0.0",
-        "twbs/bootstrap": "4.3.1"
-    },
     "keywords": [],
-    "author": "",
+    "author": "AnInternetTroll",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/AnInternetTroll/Website/issues",
+        "url": "https://github.com/AnInternetTroll/Website/issues"
     },
-}
+    "dependencies": {
+        "jquery/jquery": {
+            "version": "4.0.0"
+        },
+        "twbs/bootstrap": {
+            "version": "4.3.1"
+        }
+    }
