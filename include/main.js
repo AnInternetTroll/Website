@@ -14,8 +14,10 @@ const darkModeToggle = document.querySelector('dark-mode-toggle');
 
 //Wait until the light/dark mode toggle happens
 document.addEventListener('colorschemechange', (e) => {
+    const darkModeToggle = document.querySelector('dark-mode-toggle');
     //Logging for debbuging purpuses, such as browser compatibility check
     console.log(`Color scheme changed to ${e.detail.colorScheme}.`);
+    darkModeToggle.setAttribute('permanent', '');
     //Change the theme of comments from light to dark
     if (e.detail.colorScheme == "light") {
         //If light mode then remove the old class and add a new one
@@ -36,4 +38,5 @@ function addAnchors(tags){
         $(this).html('<a id="heading-'+index+'">'+$(this).html()+'</a>');
     });
 }
+
 addAnchors('h1');
