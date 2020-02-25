@@ -28,6 +28,12 @@ document.addEventListener('colorschemechange', (e) => {
     }
 })
 
+$(document).on('focus', 'textarea', function() {
+  $(this).asciimoji({
+//  prefix: '[',
+//  suffix: ']'
+})});
+
 function addAnchors(tags) {
     //loop through all your headers
     $.each($(tags), function(index, value) {
