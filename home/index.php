@@ -16,43 +16,23 @@ include $root . '/Website/include/php_stuff.php';?>
     <link rel="manifest" href="/Website/include/manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-
     <title>Home</title>
 
     <?php include $root . "/Website/include/includes.php";?>
-
-
-    <style type="text/css">
-    .article {
-        position: static;
-        line-height: 1.6;
-        font-size: 15px;
-    }
-    </style>
     <?php include $root . "/Website/include/nav.php";?>
-    <!-- End of Navbar -->
-    <!-- Article -->
+
 </head>
 <body>
     <br />
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-
-
-
-<?php include $root . "/Website/include/article.php";?>
+                    <?php include $root . "/Website/include/article.php";?>
                     <br />
-<?php include $root . "/Website/include/comments_html.php"?>
+                    <?php include $root . "/Website/include/comments_html.php"?>
                 </div>
             </div>
         </div>
     <br />
-    <script>
-
-</script>
-
 </body>
-
 </html>
