@@ -27,13 +27,12 @@ if ($_POST) {
     // Write stuff, then add the previous stuff at the end
     $handle = fopen("comments.php", "w");
     fwrite($handle, '
-        <div class="cardyly">
-        <div class="card">
-            <h5 class="card-title">' . $name . '</h5>
-            <hr>
-                <p class="card-text">' . $Comment . '</p>
+    <div class="cardyly">
+        <h5 class="card-header">' . $name . '</h5>
+        <div class="card-body">
+        <p class="card-text">' . $Comment . '</p>
         </div>
-        </div>
+    </div>
             <br />
             ' . $contents);
     fclose($handle);
