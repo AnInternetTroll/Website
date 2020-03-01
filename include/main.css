@@ -49,7 +49,7 @@ nav {
     display: block;
 }
 
-a:visited, a:link {
+#livesearch > * {
     color: white;
     text-decoration: none;
     /*right: 5px;*/
