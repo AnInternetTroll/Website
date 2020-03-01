@@ -26,7 +26,7 @@ include $root . '/Website/include/php_stuff.php';?>
                     <br />
                     <div class="card-deck">
                         <div class="card text-white bg-dark mb-3">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="flagg.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Norwegian</h5>
                                 <p class="card-text">Det er hvor alt som er norsk skal til</p>
@@ -34,15 +34,15 @@ include $root . '/Website/include/php_stuff.php';?>
                             <div class="card-footer text-muted"><small>Last updated: Never</small><br /><a href="Norsk/" class="btn btn-primary">Go somewhere</a></div>
                         </div>
                         <div class="card text-white bg-dark mb-3">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="code.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">English</h5>
-                                <p class="card-text">This is where I have my English assigments</p>
+                                <h5 class="card-title">Programming</h5>
+                                <p class="card-text">This is where I have my programming assigments</p>
                             </div>
-                            <div class="card-footer text-muted"><small>Last updated: Never</small><br /><a href="#" class="btn btn-primary disabled">Go somewhere</a></div>
+                            <div class="card-footer text-muted"><small>Last updated: Never</small><br /><a href="/Website/archive/programming/" class="btn btn-primary">Go somewhere</a></div>
                         </div>
                         <div class="card text-white bg-dark mb-3">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="science.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Science</h5>
                                 <p class="card-text">Bunch of sciencey stiff. From anatomy to chemestry to physics, it's all here, if I can be bothered to upload.</p>
