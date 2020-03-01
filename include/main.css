@@ -15,6 +15,7 @@ body {
     line-height: 1.6;
     font-size: 15px;
 }
-.card-body {
+.cardyly {
     background-color: var(--card-background-color) !important;
+    border-radius: 10px 10px 10px 3px !important;
 }
