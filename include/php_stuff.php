@@ -31,7 +31,6 @@ if ($_POST) {
             <h5 class="card-title">' . $name . '</h5>
             <hr>
                 <p class="card-text">' . $Comment . '</p>
-            </div>
         </div>
             <br />
             ' . $contents);
