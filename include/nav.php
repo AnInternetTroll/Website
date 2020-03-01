@@ -4,7 +4,7 @@ $current_file_name = $_SERVER['REQUEST_URI'];
 ?>
     <nav class='navbar sticky-top navbar-expand-lg navbar-dark bg-primary'>
         <a class='navbar-brand' href='/Website/home/'>
-            <img src='/Website/media/Dickbutt steve.png' width='40' height='50' class='d-inline-block align-top' alt=''>
+            <img src='/Website/media/dickbutt.png' width='30' height='30' class='d-inline-block align-top' alt=''>
         </a>
         <a class='navbar-brand' href='/Website/home/'>Luca's website</a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
