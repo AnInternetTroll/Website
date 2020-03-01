@@ -35,7 +35,9 @@ $current_file_name = $_SERVER['REQUEST_URI'];
                 </li>
             </ul>
               <form class="form-inline">
-    <button class="btn btn-outline-primary" type="button" style="cursor: default !important;">
+    <button class="btn" type="button" onclick="toggleColorScheme()" id="darkModeToggle">
+        
+</button>
         <dark-mode-toggle
       id="dark-mode-toggle-1"
       legend=""
@@ -44,14 +46,13 @@ $current_file_name = $_SERVER['REQUEST_URI'];
       light=""
       style=""
   ></dark-mode-toggle>
-</button>
 </form>
-            <form class='form-inline my-2 my-lg-0' action='/Website/include/search.php' method='post'>
-                <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe'>
-                <button class='btn btn-success' type='submit'>Search</button>
+            <form class='form-inline my-2 my-lg-0' action='/Website/include/search.php' method='post' autocomplete="off">
+                <input id='searchBox' class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe' onkeyup="showResult(this.value)">
             </form>
         </div>
     </nav>
+    <div id="livesearch"></div>
     <!-- End of Navbar -->
 
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages>
+  <link>
+    <title>Home</title>
+    <url>/Website/home</url>
+  </link>
+  <link>
+    <title>About</title>
+    <url>/Website/about</url>
+  </link>
+  <link>
+    <title>Archive home</title>
+    <url>/Website/archive/index.php</url>
+  </link>
+  <link>
+    <title>Norsk</title>
+    <url>/Website/archive/Norsk</url>
+  </link>
+  <link>
+    <title>Programming</title>
+    <url>/Website/archive/programming</url>
+  </link>
+  <link>
+    <title>Science</title>
+    <url>/Website/archive/Science</url>
+  </link>
+</pages>
