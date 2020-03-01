@@ -28,15 +28,13 @@ if ($_POST) {
     $handle = fopen("comments.php", "w");
     fwrite($handle, '
         <div class="cardyly">
-        <div>
-            <div class="card-header">' . $name . '</div>
-            <div class="card-body">
-                <p class="card-text">' . $Comment . "</p>
+            <h5 class="card-title">' . $name . '</h5>
+            <hr>
+                <p class="card-text">' . $Comment . '</p>
             </div>
         </div>
-        </div>
             <br />
-            " . $contents);
+            ' . $contents);
     fclose($handle);
 }
 

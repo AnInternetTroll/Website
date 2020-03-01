@@ -3,10 +3,10 @@
 $current_file_name = $_SERVER['REQUEST_URI'];
 ?>
     <nav class='navbar sticky-top navbar-expand-lg navbar-dark bg-primary'>
-        <a class='navbar-brand' href='#'>
-            <img src='/Website/media/Dickbutt steve.png' width='40' height='57' class='d-inline-block align-top' alt=''>
+        <a class='navbar-brand' href='/Website/home/'>
+            <img src='/Website/media/Dickbutt steve.png' width='40' height='50' class='d-inline-block align-top' alt=''>
         </a>
-        <a class='navbar-brand' href='#'>Luca's website</a>
+        <a class='navbar-brand' href='/Website/home/'>Luca's website</a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span class='navbar-toggler-icon'></span>
         </button>
@@ -26,7 +26,7 @@ $current_file_name = $_SERVER['REQUEST_URI'];
                         <a <?php if (strpos($current_file_name, 'archive/index.php') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/index.php'>Archive home</a>
                         <div class='dropdown-divider'></div>
                         <a <?php if (strpos($current_file_name, 'Norsk') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/Norsk/'>Norsk</a>
-                        <a <?php if (strpos($current_file_name, 'programming') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/programming/'>Programming</a>
+                        <a <?php if (strpos($current_file_name, 'Programming') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/programming/'>Programming</a>
                         <a <?php if (strpos($current_file_name, 'Science') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/Science/'>Science</a>
                     </div>
                 </li>
