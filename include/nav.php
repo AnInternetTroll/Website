@@ -39,20 +39,14 @@ $current_file_name = $_SERVER['REQUEST_URI'];
         
 </button>
         <dark-mode-toggle
-      id="dark-mode-toggle-1"
-      legend=""
-      appearance="toggle"
-      dark=""
-      light=""
-      style=""
   ></dark-mode-toggle>
 </form>
             <form class='form-inline my-2 my-lg-0' action='/Website/include/search.php' method='post' autocomplete="off">
                 <input id='searchBox' class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe' onkeyup="showResult(this.value)">
+    <div id="livesearch" class="livesearch"></div>
             </form>
         </div>
     </nav>
-    <div id="livesearch"></div>
     <!-- End of Navbar -->
 
 

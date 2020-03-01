@@ -23,7 +23,7 @@ body {
 }
 
 dark-mode-toggle {
-    z-index: -1!important;
+    z-index: -1;
 }
 
 #darkModeToggle {
@@ -37,24 +37,20 @@ nav {
     z-index: 11;
 }
 
-#livesearch  {
-    position: fixed;
+.livesearch  {
+    /*position: fixed;
     right: 135px;
-    top: 55px;
+    top: 55px;*/
     padding: 5px;
     background-color: grey;
     border-radius: 0px 0px 5px 5px;
     text-decoration: none;
     z-index: 10;
-}
-a:link {
-    color: white;
-    text-decoration: none;
-    right: 5px;
+    display: block;
 }
 
-a:visited {
+a:visited, a:link {
     color: white;
     text-decoration: none;
-    right: 5px;
+    /*right: 5px;*/
 }

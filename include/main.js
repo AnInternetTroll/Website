@@ -53,9 +53,11 @@ $(document).on('focus', 'textarea', function() {
 
 //Live search function
 function showResult(str) {
+  const resBox = document.querySelector('#livesearch');
     if (str.length == 0) {
         document.getElementById("livesearch").innerHTML = "";
         //document.getElementById("livesearch").style.border="0px";
+        toggleBtn.classList.remove('livesearch');
         return;
     }
     if (window.XMLHttpRequest) {
@@ -67,6 +69,7 @@ function showResult(str) {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("livesearch").innerHTML = this.responseText;
+            toggleBtn.classList.add('livesearch');
             //document.getElementById("livesearch").style.border="1px solid #A5ACB2";
         }
     }
