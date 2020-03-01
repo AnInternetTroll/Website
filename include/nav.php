@@ -26,7 +26,7 @@ $current_file_name = $_SERVER['REQUEST_URI'];
                         <a <?php if (strpos($current_file_name, 'archive/index.php') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/index.php'>Archive home</a>
                         <div class='dropdown-divider'></div>
                         <a <?php if (strpos($current_file_name, 'Norsk') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/Norsk/'>Norsk</a>
-                        <a <?php if (strpos($current_file_name, 'Programming') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/programming/'>Programming</a>
+                        <a <?php if (strpos($current_file_name, 'programming') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/programming/'>Programming</a>
                         <a <?php if (strpos($current_file_name, 'Science') !== false) {echo "class='dropdown-item active'";} else {echo "class='dropdown-item'";}?> href='/Website/archive/Science/'>Science</a>
                     </div>
                 </li>
