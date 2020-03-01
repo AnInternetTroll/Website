@@ -20,12 +20,12 @@ if (strlen($q)>0) {
         if ($hint=="") {
           $hint="<a href='" .
           $z->item(0)->childNodes->item(0)->nodeValue .
-          "' target='_blank'>" .
+          "' target='_self'>" .
           $y->item(0)->childNodes->item(0)->nodeValue . "</a>";
         } else {
           $hint=$hint . "<br /><a href='" .
           $z->item(0)->childNodes->item(0)->nodeValue .
-          "' target='_blank'>" .
+          "' target='_self'>" .
           $y->item(0)->childNodes->item(0)->nodeValue . "</a>";
         }
       }
@@ -36,7 +36,7 @@ if (strlen($q)>0) {
 // Set output to "no suggestion" if no hint was found
 // or to the correct values
 if ($hint=="") {
-  $response='<a href="#noResults" target="_blank">No results found</a>';
+  $response='<a href="#noResults" target="_self">No results found</a>';
 } else {
   $response=$hint;
 }

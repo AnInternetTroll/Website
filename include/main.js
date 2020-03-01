@@ -1,37 +1,37 @@
 // If `prefers-color-scheme` is not supported, fall back to light mode.
 // In this case, dark.css will be downloaded with `highest` priority.
 $(document).ready(function() {
-    const toggleBtn = document.querySelector('#darkModeToggle');
+    const resBox = document.querySelector('#darkModeToggle');
     const darkModeToggle = document.querySelector('dark-mode-toggle');
     if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
         document.documentElement.style.display = 'none';
         document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="/Website/include/dark.css" onload="document.documentElement.style.display = \'\'">');
     }
     if (darkModeToggle.mode == 'dark') {
-        toggleBtn.textContent = "Light";
-        toggleBtn.classList.add('btn-light');
+        resBox.textContent = "Light";
+        resBox.classList.add('btn-light');
     } else if (darkModeToggle.mode == 'light') {
-        toggleBtn.textContent = "Dark";
-        toggleBtn.classList.add('btn-dark');
+        resBox.textContent = "Dark";
+        resBox.classList.add('btn-dark');
     }
 
 });
 
 function toggleColorScheme() {
-    const toggleBtn = document.querySelector('#darkModeToggle');
+    const resBox = document.querySelector('#darkModeToggle');
     const darkModeToggle = document.querySelector('dark-mode-toggle');
     if (darkModeToggle.mode == 'dark') {
         darkModeToggle.mode = 'light';
         console.log("changed to light");
-        toggleBtn.textContent = "Dark";
-        toggleBtn.classList.remove('btn-light');
-        toggleBtn.classList.add('btn-dark');
+        resBox.textContent = "Dark";
+        resBox.classList.remove('btn-light');
+        resBox.classList.add('btn-dark');
     } else if (darkModeToggle.mode == 'light') {
         darkModeToggle.mode = 'dark';
         console.log("changed to dark");
-        toggleBtn.textContent = "Light";
-        toggleBtn.classList.remove('btn-dark');
-        toggleBtn.classList.add('btn-light');
+        resBox.textContent = "Light";
+        resBox.classList.remove('btn-dark');
+        resBox.classList.add('btn-light');
     }
 }
 
@@ -53,11 +53,11 @@ $(document).on('focus', 'textarea', function() {
 
 //Live search function
 function showResult(str) {
-  const resBox = document.querySelector('#livesearch');
+    const resBox = document.querySelector('#livesearch');
     if (str.length == 0) {
         document.getElementById("livesearch").innerHTML = "";
         //document.getElementById("livesearch").style.border="0px";
-        toggleBtn.classList.remove('livesearch');
+        resBox.classList.remove('livesearch');
         return;
     }
     if (window.XMLHttpRequest) {
@@ -69,7 +69,7 @@ function showResult(str) {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("livesearch").innerHTML = this.responseText;
-            toggleBtn.classList.add('livesearch');
+            resBox.classList.add('livesearch');
             //document.getElementById("livesearch").style.border="1px solid #A5ACB2";
         }
     }
