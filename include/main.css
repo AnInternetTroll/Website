@@ -56,3 +56,11 @@ nav {
 .card-deck .card {
     background-color: var(--card-background-color)!important;
 }
+.cardyly img {
+  max-width: 100%;
+  height: auto;
+  word-wrap: break-word;
+}
+.cardyly{
+    word-wrap: break-word;
+}
