@@ -7,6 +7,10 @@ body {
     background-color: var(--background-color);
     overscroll-behavior-y: contain;
 }
+html.transition, html.transition *, html.transition *:before, html.transition *:after {
+    transition: ease-in-out 200ms;
+    transition-delay: 0;
+}
 .col-sm-12 {
     background-color: var(--article-background-color);
     box-shadow: 5px 10px 8px 10px #111111;
@@ -53,4 +57,8 @@ nav {
     color: white;
     text-decoration: none;
     /*right: 5px;*/
+}
+
+.card-deck .card {
+    background-color: var(--card-background-color)!important;
 }

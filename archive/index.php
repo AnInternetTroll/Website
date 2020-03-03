@@ -25,7 +25,7 @@ include $root . '/Website/include/php_stuff.php';?>
                 <div class='article'>
                     <br />
                     <div class="card-deck">
-                        <div class="card text-white bg-dark mb-3">
+                        <div class="card mb-3">
                             <img src="flagg.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Norwegian</h5>
@@ -33,7 +33,7 @@ include $root . '/Website/include/php_stuff.php';?>
                             </div>
                             <div class="card-footer text-muted"><small>Last updated: Never</small><br /><a href="Norsk/" class="btn btn-primary">Go somewhere</a></div>
                         </div>
-                        <div class="card text-white bg-dark mb-3">
+                        <div class="card mb-3">
                             <img src="code.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Programming</h5>
@@ -41,7 +41,7 @@ include $root . '/Website/include/php_stuff.php';?>
                             </div>
                             <div class="card-footer text-muted"><small>Last updated: Never</small><br /><a href="/Website/archive/programming/" class="btn btn-primary">Go somewhere</a></div>
                         </div>
-                        <div class="card text-white bg-dark mb-3">
+                        <div class="card mb-3">
                             <img src="science.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Science</h5>
