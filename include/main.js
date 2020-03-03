@@ -23,7 +23,7 @@ function toggleColorScheme() {
         document.documentElement.classList.add('transition');
         window.setTimeout(() => {
             document.documentElement.classList.remove('transition');
-        }, 200)
+        }, 500)
     }
     const resBox = document.querySelector('#darkModeToggle');
     const darkModeToggle = document.querySelector('dark-mode-toggle');

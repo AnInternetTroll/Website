@@ -8,7 +8,7 @@
     "display": "standalone",
     "description": "App for stuff idk.",
     "lang": "en",
-    "scope":"http://95.34.109.76",
+    "scope":"/Website",
     "icons": [{
         "src": "/Website/media/dickbutt_192.png",
         "sizes": "192x192",
