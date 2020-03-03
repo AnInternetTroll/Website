@@ -1,6 +1,24 @@
 # The include folder
 This is where all code related files that are used in more places around the site go with an explenation.
 
+# Table of contents
+* [The include folder](#the-include-folder)
+      * [article.php](#articlephp)
+      * [asciimoji.jquery.js/asciimoji.js](#asciimojijqueryjsasciimojijs)
+      * [comments_html.php](#comments_htmlphp)
+      * [dark.css/light.css/main.css](#darkcsslightcssmaincss)
+      * [includes.php](#includesphp)
+      * [links.xml](#linksxml)
+      * [main.js](#mainjs)
+      * [manifest.json](#manifestjson)
+      * [nav.php](#navphp)
+      * [Parsedown.php](#parsedownphp)
+      * [php_bbcode_phraser.php](#php_bbcode_phraserphp)
+      * [php_stuff.php](#php_stuffphp)
+      * [search.php](#searchphp)
+      * [table-of-contents.php](#table-of-contentsphp)
+
+
 ## `article.php`
 This is the file that dictates how the article looks. It requires an `article.md` file in the website's folder. 
 Dependencies: 
@@ -20,7 +38,7 @@ Dependencies:
 
 ## `dark.css`/`light.css`/`main.css`
 `dark.css` and `light.css` set variables based on the prefered color scheme. These variables are then used in `main.css`. 
-> NOTE: Default color scheme is `dark.css`, which is set in `main.js`. 
+> NOTE: Default color scheme is `dark.css`, which is set in `main.js`.   
 > DOUBLE NOTE: Internet explorer doesn't support variables
 
 ## includes.php
@@ -64,4 +82,4 @@ This is the first file that is loaded on all pages. It includes the formating fo
 This is the file that handles the live search server side functionality. 
 
 ## `table-of-contents.php`
-This file is a dependency from [table-of-contents.php](https://github.com/jenstornell/php-table-of-contents) which gives the article anchor points. It also can be used to make a table of contents by uncommenting 2 lines from [`article.php`](#article.php)
+This file is a dependency from [table-of-contents.php](https://github.com/jenstornell/php-table-of-contents) which gives the article anchor points. It also can be used to make a table of contents by uncommenting 2 lines from [`article.php`](#articlephp)

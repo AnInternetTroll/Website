@@ -25,23 +25,19 @@ html.transition, html.transition *, html.transition *:before, html.transition *:
     background-color: var(--card-background-color);
     border-radius: 10px 10px 10px 3px;
 }
-
 dark-mode-toggle {
     z-index: -1;
 }
-
 #darkModeToggle {
     z-index: 3!important;
 }
-
 nav {
     z-index: 1!important;
 }
 #searchBox {
     z-index: 11;
 }
-
-.livesearch  {
+.livesearch {
     /*position: fixed;
     right: 135px;
     top: 55px;*/
@@ -52,13 +48,11 @@ nav {
     z-index: 10;
     display: block;
 }
-
-#livesearch > a {
+#livesearch>a {
     color: white;
     text-decoration: none;
     /*right: 5px;*/
 }
-
 .card-deck .card {
     background-color: var(--card-background-color)!important;
 }
