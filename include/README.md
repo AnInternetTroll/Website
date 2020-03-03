@@ -34,5 +34,6 @@ These are the search results. File structure goes like
 		<title>TITLE OF PAGE</title>
 		<url>URL FROM SERVER ROOT</url>
 	</link>
-<pages>```
+<pages>
+```
 There should only be 1 `<pages>` tag, and as many search results as `<link>` tags there are. 
