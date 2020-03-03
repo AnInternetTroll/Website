@@ -37,3 +37,31 @@ These are the search results. File structure goes like
 <pages>
 ```
 There should only be 1 `<pages>` tag, and as many search results as `<link>` tags there are. 
+
+## `main.js`
+This is where all the javascript goes for all websites
+
+## `manifest.json`
+This is the file that is responsable for PWA functionality. That being the "add to home" function or the display mode for example.
+
+## `nav.php`
+This is the navbar that is included on all pages. It is highly recommanded to include a function like 
+```php
+if (strpos($current_file_name, 'WORD') !== false) {echo "class='nav-item active'";} else {echo "class='nav-item'";}
+```
+Which will add the class active to a button if the URL has the word `WORD`. The word should be changed of course.
+
+## `Parsedown.php`
+This file is a dependency from [Parsedown](https://github.com/erusev/parsedown) which give comments and article the function to be formated using markdown.
+
+## `php_bbcode_phraser.php`
+This file is a dependency from [php_bbcode_phraser.php](https://gist.github.com/afsalrahim/bc8caf497a4b54c5d75d) which give comments the function to be formated using BBCode.
+
+## `php_stuff.php`
+This is the first file that is loaded on all pages. It includes the formating for comments and used to include an IP logger.
+
+## `search.php`
+This is the file that handles the live search server side functionality. 
+
+## `table-of-contents.php`
+This file is a dependency from [table-of-contents.php](https://github.com/jenstornell/php-table-of-contents) which gives the article anchor points. It also can be used to make a table of contents by uncommenting 2 lines from [`article.php`](#article.php)
