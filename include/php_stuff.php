@@ -11,6 +11,7 @@ fclose($f); //closes ipaddresses.txt for reading and writing
 //Help with php include
 
 //Markdown support
+include $root . "/Website/include/php_bbcode_parser.php";
 include $root . "/Website/include/Parsedown.php";
 $Parsedown = new Parsedown();
 $Parsedown->setSafeMode(true);
@@ -19,7 +20,13 @@ $Parsedown->setSafeMode(true);
 if ($_POST) {
     //Get the name and comment and clear them of anything unsafe. Names don't get markdown support because I don't want headings in there
     $name    = htmlspecialchars($_POST['name']);
-    $Comment = $Parsedown->text($_POST['Comment']);
+    if ($_POST['phraser'] == "BBCode"){
+    $Comment = replaceBBcodes($_POST['Comment']);
+} elseif ($_POST['phraser'] == "Markdown") {
+   $Comment = $Parsedown->text($_POST['Comment']);
+} else {
+    $Comment = htmlspecialchars($_POST['Comment']);
+}
     // Save the contents of the file before writing
     $handle   = fopen("comments.php", "r");
     $contents = fread($handle, filesize("comments.php"));
