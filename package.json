@@ -1,21 +1,29 @@
 {
-    "name": "aninternettroll-website",
-    "description": "A website",
-    "version": "0.1.0",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/AnInternetTroll/Website.git"
-    },
-    "keywords": [],
-    "author": "AnInternetTroll",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/AnInternetTroll/Website/issues"
-    },
-    "dependencies": {
-        "jquery":"4.0.0",
-        "bootstrap":"4.3.1",
-        "dark-mode-toggle":"0.5.1",
-        "ASCIImoji":"1.5.0"
-    }
+  "name": "aninternettroll-website",
+  "description": "A website",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ./main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnInternetTroll/Website.git"
+  },
+  "keywords": [],
+  "author": "AnInternetTroll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnInternetTroll/Website/issues"
+  },
+  "dependencies": {
+    "jquery": "4.0.0",
+    "bootstrap": "4.3.1",
+    "dark-mode-toggle": "0.5.1",
+    "ASCIImoji": "1.5.0"
+  },
+  "devDependencies": {
+    "electron": "^8.0.3"
+  },
+  "homepage": "https://github.com/AnInternetTroll/Website#readme"
 }
