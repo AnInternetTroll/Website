@@ -41,8 +41,8 @@ $current_file_name = $_SERVER['REQUEST_URI'];
         <dark-mode-toggle
   ></dark-mode-toggle>
 </form>
-            <form class='form-inline my-2 my-lg-0' action='/Website/include/search.php' method='post' autocomplete="off">
-                <input id='searchBox' class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe' onkeyup="showResult(this.value)">
+            <form class='form-inline my-2 my-lg-0' action='/Website/include/search.php' method='post' autocomplete="off" id="searchBox">
+                <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe' onkeyup="showResult(this.value)">
     <div id="livesearch" class="livesearch"></div>
             </form>
         </div>
