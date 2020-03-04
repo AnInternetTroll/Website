@@ -11,7 +11,9 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  win.loadFile('index.html')
+
+  //TODO: Put here a domain name whenever you will have one 4head
+  win.loadURL(`file://${process.cwd()}index.html`);
 
   // Open the DevTools.
   win.webContents.openDevTools()

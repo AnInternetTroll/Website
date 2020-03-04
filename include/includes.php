@@ -1,5 +1,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
     <link rel="icon" href="/Website/media/dickbutt_192.png">
     <!-- Apple -->
     <link rel="apple-touch-icon" sizes="192x192" href="/Website/media/dickbutt_192.png" />
@@ -29,3 +30,4 @@
     <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
     <!-- main.js -->
     <script type="text/javascript" src="/Website/include/main.js"></script>
+    <script>if (window.module) module = window.module;</script>
