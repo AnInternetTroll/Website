@@ -45,7 +45,7 @@ include $root . '/Website/include/php_stuff.php'; ?>
                 </button>
                 </a>
                 <br /><br />
-                <iframe src="https://scratch.mit.edu/projects/370387670/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                <iframe src="https://scratch.mit.edu/projects/370387670/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="yes" allowfullscreen></iframe>
                 <br />
                 <?php include $root . "/Website/include/comments_html.php" ?>
             </div>
