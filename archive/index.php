@@ -51,10 +51,40 @@ include $root . '/Website/include/php_stuff.php';?>
                         </div>
                     </div>
                     <!--Second row-->
+                    <div class="card-deck">
+                    <?php
+$xmlDoc = new DOMDocument();
+
+$currentDir = scandir($root . "/Website/archive/");
+
+foreach ($currentDir as $dir) {
+    if (is_dir($dir) && $dir != "." && $dir != "..") {
+        $dir2      = scandir($dir);
+        $checkProp = array_search("properties.xml", $dir2);
+        if ($checkProp == true) {
+            $xmldata = simplexml_load_file($dir . "/properties.xml") or die("Failed to load");
+
+            $title       = $xmldata->data[0]->title;
+            $description = $xmldata->data[0]->description;
+
+            echo '
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">' . $title . '</h5>
+                                <p class="card-text">' . $description . '</p>
+                            </div>
+                        </div>
+            ';
+        } else {echo "false ";}
+    }
+}
+
+?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <br />
 </body>
