@@ -13,7 +13,8 @@
     "require": {
         "erusev/parsedown": "1.0.*",
         "php": ">=5.3.0",
-        "twbs/bootstrap": "4.3.1"
+        "twbs/bootstrap": "4.3.1",
+        "jbbcode/jbbcode":"0.0"
     },
     "abandoned": false
 }
