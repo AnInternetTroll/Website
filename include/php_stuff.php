@@ -13,12 +13,13 @@ fclose($f); //closes ipaddresses.txt for reading and writing
 //Markdown support
 require_once  $root . "/Website/include/jbbcode/Parser.php";
 include $root . "/Website/include/Parsedown.php";
+
 $Parsedown = new Parsedown();
 $Parsedown->setSafeMode(true);
 
 $parser = new JBBCode\Parser();
 $parser->addCodeDefinitionSet(new JBBCode\DefaultCodeDefinitionSet());
- 
+
 $Comment = htmlspecialchars($_POST['Comment']);
 
 //Save comments to a file
@@ -27,12 +28,15 @@ if ($_POST) {
     $name    = htmlspecialchars($_POST['name']);
     if ($_POST['phraser'] == "BBCode"){
         $parser->parse($Comment);
+        include $root . "/Website/include/discord_comments.php";
         $Comment = $parser->getAsHtml();
-} elseif ($_POST['phraser'] == "Markdown") {
-   $Comment = $Parsedown->text($Comment);
-} else {
-    $Comment = htmlspecialchars($Comment);
-}
+    } elseif ($_POST['phraser'] == "Markdown") {
+        include $root . "/Website/include/discord_comments.php";
+        $Comment = $Parsedown->text($Comment);
+    } else {
+        $Comment = htmlspecialchars($Comment);
+        include $root . "/Website/include/discord_comments.php";
+    }
     // Save the contents of the file before writing
     $handle   = fopen("comments.php", "r");
     $contents = fread($handle, filesize("comments.php"));
@@ -41,14 +45,14 @@ if ($_POST) {
     $handle = fopen("comments.php", "w");
     fwrite($handle, '
     <div class="cardyly">
-        <h5 class="card-header">' . $name . '</h5>
+    <h5 class="card-header">' . $name . '</h5>
         <div class="card-body">
         <p class="card-text">' . $Comment . '</p>
         </div>
-    </div>
-            <br />
-            ' . $contents);
-    fclose($handle);
+        </div>
+        <br />
+        ' . $contents);
+        fclose($handle);
 }
 
 ?>
