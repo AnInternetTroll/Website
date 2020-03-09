@@ -43,7 +43,7 @@ $current_file_name = $_SERVER['REQUEST_URI'];
 </form>
             <form class='form-inline my-2 my-lg-0' action='/Website/include/search.php' method='post' autocomplete="off" id="searchBox">
                 <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe' onkeyup="showResult(this.value)">
-    <div id="livesearch" class="livesearch"></div>
+    <div id="livesearch" class="livesearch" style="display: none;"></div>
             </form>
         </div>
     </nav>

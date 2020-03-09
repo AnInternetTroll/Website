@@ -1,20 +1,20 @@
 <?php $root = $_SERVER['DOCUMENT_ROOT'];
-include $root . '/Website/include/php_stuff.php';?>
+include $root . '/Website/include/php_stuff.php'; ?>
 <!DOCTYPE html>
 <html>
 
 <head>
 
     <title>Home</title>
-      <?php include $root . "/Website/include/includes.php";?>
+    <?php include $root . "/Website/include/includes.php"; ?>
     <style type="text/css">
-    .article {
-        position: static;
-        line-height: 1.6;
-        font-size: 15px;
-    }
+        .article {
+            position: static;
+            line-height: 1.6;
+            font-size: 15px;
+        }
     </style>
-     <?php include $root . "/Website/include/nav.php";?>
+    <?php include $root . "/Website/include/nav.php"; ?>
     <!-- Article -->
 
 <body>
@@ -41,7 +41,7 @@ include $root . '/Website/include/php_stuff.php';?>
                             </div>
                             <div class="card-footer text-muted"><small>Last updated: Never</small><br /><a href="Science/" class="btn btn-primary">Go somewhere</a></div>
                         </div>
-			<div class="card mb-3">
+                        <div class="card mb-3">
                             <img src="code.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Programming</h5>
@@ -51,23 +51,25 @@ include $root . '/Website/include/php_stuff.php';?>
                         </div>
                     </div>
                     <!--Second row-->
-                    <div class="card-deck">
+
                     <?php
-$xmlDoc = new DOMDocument();
+                    $xmlDoc = new DOMDocument();
 
-$currentDir = scandir($root . "/Website/archive/");
+                    $currentDir = scandir($root . "/Website/archive/");
+                    $i = 0;
+                    foreach ($currentDir as $dir) {
+                        if (is_dir($dir) && $dir != "." && $dir != "..") {
+                            $dir2      = scandir($dir);
+                            $checkProp = array_search("properties.xml", $dir2);
+                            if ($checkProp == true) {
+                                if ($i == 0) {
+                                    echo '<div class="card-deck">';
+                                }
+                                $xmldata = simplexml_load_file($dir . "/properties.xml") or die("Failed to load");
 
-foreach ($currentDir as $dir) {
-    if (is_dir($dir) && $dir != "." && $dir != "..") {
-        $dir2      = scandir($dir);
-        $checkProp = array_search("properties.xml", $dir2);
-        if ($checkProp == true) {
-            $xmldata = simplexml_load_file($dir . "/properties.xml") or die("Failed to load");
-
-            $title       = $xmldata->data[0]->title;
-            $description = $xmldata->data[0]->description;
-
-            echo '
+                                $title       = $xmldata->data[0]->title;
+                                $description = $xmldata->data[0]->description;
+                                echo '
 
                         <div class="card mb-3">
                             <div class="card-body">
@@ -75,13 +77,22 @@ foreach ($currentDir as $dir) {
                                 <p class="card-text">' . $description . '</p>
                             </div>
                         </div>
-            ';
-        } else {echo "false ";}
-    }
-}
+                                        ';
+                                $i += 1;
+                                if ($i == 2) {
+                                    echo '</div>';
+                                    $i = 0;
+                                }
+                            } else {
+                                echo "false ";
+                            }
+                        }
+                    }
+                    if ($i == 1 || $i == 2) {
+                        echo '</div>';
+                    }
+                    ?>
 
-?>
-                    </div>
                 </div>
             </div>
         </div>

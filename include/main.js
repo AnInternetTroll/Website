@@ -10,9 +10,11 @@ $(document).ready(function() {
     }
     if (darkModeToggle.mode == 'dark') {
         darkLightToggle.textContent = "Light";
+        darkLightToggle.classList.remove('btn-dark');
         darkLightToggle.classList.add('btn-light');
     } else if (darkModeToggle.mode == 'light') {
         darkLightToggle.textContent = "Dark";
+        darkLightToggle.classList.remove('btn-light');
         darkLightToggle.classList.add('btn-dark');
     }
     resBox.style.display = 'none';
@@ -25,21 +27,21 @@ function toggleColorScheme() {
             document.documentElement.classList.remove('transition');
         }, 500)
     }
-    const resBox = document.querySelector('#darkModeToggle');
+    const darkLightToggle = document.querySelector('#darkModeToggle');
     const darkModeToggle = document.querySelector('dark-mode-toggle');
     if (darkModeToggle.mode == 'dark') {
         darkModeToggle.mode = 'light';
         console.log("changed to light");
-        resBox.textContent = "Dark";
-        resBox.classList.remove('btn-light');
-        resBox.classList.add('btn-dark');
+        darkLightToggle.textContent = "Dark";
+        darkLightToggle.classList.remove('btn-light');
+        darkLightToggle.classList.add('btn-dark');
         trans();
     } else if (darkModeToggle.mode == 'light') {
         darkModeToggle.mode = 'dark';
         console.log("changed to dark");
-        resBox.textContent = "Light";
-        resBox.classList.remove('btn-dark');
-        resBox.classList.add('btn-light');
+        darkLightToggle.textContent = "Light";
+        darkLightToggle.classList.remove('btn-dark');
+        darkLightToggle.classList.add('btn-light');
         trans();
     }
 }
@@ -47,9 +49,19 @@ function toggleColorScheme() {
 //Wait until the light/dark mode toggle happens
 document.addEventListener('colorschemechange', (e) => {
     const darkModeToggle = document.querySelector('dark-mode-toggle');
+    const darkLightToggle = document.querySelector('#darkModeToggle');
     //Logging for debbuging purpuses, such as browser compatibility check
     console.log(`Color scheme changed to ${e.detail.colorScheme}.`);
     darkModeToggle.setAttribute('permanent', '');
+    if (e.detail.colorScheme == "dark"){
+        darkLightToggle.textContent = "Dark";
+        darkLightToggle.classList.remove('btn-light');
+        darkLightToggle.classList.add('btn-dark');
+    } else if (e.detail.colorScheme == "light"){
+        darkLightToggle.textContent = "Light";
+        darkLightToggle.classList.remove('btn-dark');
+        darkLightToggle.classList.add('btn-light');
+    }
 })
 
 
