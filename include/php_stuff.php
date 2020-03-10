@@ -20,6 +20,9 @@ $Parsedown->setSafeMode(true);
 $parser = new JBBCode\Parser();
 $parser->addCodeDefinitionSet(new JBBCode\DefaultCodeDefinitionSet());
 
+$builder = new JBBCode\CodeDefinitionBuilder('center', '<div style="text-align: center;">{param}</div>');
+$parser->addCodeDefinition($builder->build());
+
 $Comment = htmlspecialchars($_POST['Comment']);
 
 //Save comments to a file

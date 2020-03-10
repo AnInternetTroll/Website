@@ -45,7 +45,7 @@ include $root . '/Website/include/php_stuff.php'; ?>
     <br />
     <div class="container">
         <div class="row">
-            <div class="col-sm-12" style="background-image:url(https://raw.githubusercontent.com/Tara-T/tara-t.github.io/master/christmas/tree.png); background-repeat: no-repeat; background-position: center; background-size: cover;">
+            <div class="col-sm-12" style="color:white!important;background-image:url(https://raw.githubusercontent.com/Tara-T/tara-t.github.io/master/christmas/tree.png); background-repeat: no-repeat; background-position: center; background-size: cover;">
                 <br />
                 <div id="norsk">
                     <?php
