@@ -19,7 +19,7 @@ $hookObject = json_encode([
             // The type of your embed, will ALWAYS be "rich"
             "type" => "rich",
             // A description for your embed
-            "description" => $Comment,
+            "description" => $discordEmbedMessage,
             /* A timestamp to be displayed below the embed, IE for when an an article was posted
              * This must be formatted as ISO8601
              */
