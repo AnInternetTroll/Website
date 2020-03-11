@@ -28,6 +28,35 @@ fclose($f); //closes ipaddresses.txt for reading and writing
 
     $builder = new JBBCode\CodeDefinitionBuilder('center', '<div style="text-align: center;">{param}</div>');
     $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('left', '<div style="text-align: left;">{param}</div>');
+    $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('right', '<div style="text-align: right;">{param}</div>');
+    $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('justify', '<div style="text-align: justify;">{param}</div>');
+    $parser->addCodeDefinition($builder->build());
+//    $builder = new JBBCode\CodeDefinitionBuilder('size', '<div style="font-size: {option};">{param}</div>');
+//    $builder->setUseOption(true)->setOptionValidator(new \JBBCode\validators\UrlValidator());
+    $builder = new JBBCode\CodeDefinitionBuilder('quote', '<blockquote>{param}</blockquote>');
+    $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('code', '<code>{param}</code>');
+    $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('ol', '<ul>{param}</ul>');
+    $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('li', '<li>{param}</li>');
+    $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('pre', '<pre>{param}</pre>');
+    $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('table', '<table>{param}</table>');
+    $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('tr', '<tr>{param}</tr>');
+    $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('td', '<td>{param}</td>');
+    $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('th', '<th>{param}</th>');
+    $parser->addCodeDefinition($builder->build());
+//    $builder = new JBBCode\CodeDefinitionBuilder('youtube', '<iframe width="949" height="534" src="https://www.youtube.com/embed/{param}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+//    $builder->setUseOption(true)->setOptionValidator(new \JBBCode\validators\UrlValidator());
+
 
     $Comment = $_POST['Comment'];
 
@@ -37,7 +66,7 @@ fclose($f); //closes ipaddresses.txt for reading and writing
         $name    = htmlspecialchars($_POST['name']);
         if ($_POST['phraser'] == "BBCode") {
             //Make it BBCode
-            $parser->parse($Comment);
+            $parser->parse(htmlspecialchars($Comment));
             //Make the BBCode message into HTML
             $Comment = $parser->getAsHtml();
             //Make that markdown for Discord
