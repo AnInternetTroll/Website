@@ -1,3 +1,16 @@
+if ('serviceWorker' in navigator) {
+    // Register a service worker hosted at the root of the
+    // site using the default scope.
+    navigator.serviceWorker.register('/Website/include/sw.js').then(function(registration) {
+      console.log('Service worker registration succeeded:', registration);
+    }, /*catch*/ function(error) {
+      console.log('Service worker registration failed:', error);
+    });
+  } else {
+    console.log('Service workers are not supported.');
+  }
+
+
 // If `prefers-color-scheme` is not supported, fall back to light mode.
 // In this case, dark.css will be downloaded with `highest` priority.
 $(document).ready(function() {
