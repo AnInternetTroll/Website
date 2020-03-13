@@ -54,6 +54,8 @@ fclose($f); //closes ipaddresses.txt for reading and writing
     $parser->addCodeDefinition($builder->build());
     $builder = new JBBCode\CodeDefinitionBuilder('th', '<th>{param}</th>');
     $parser->addCodeDefinition($builder->build());
+    $builder = new JBBCode\CodeDefinitionBuilder('br', '<br />{param}');
+    $parser->addCodeDefinition($builder->build());
 //    $builder = new JBBCode\CodeDefinitionBuilder('youtube', '<iframe width="949" height="534" src="https://www.youtube.com/embed/{param}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 //    $builder->setUseOption(true)->setOptionValidator(new \JBBCode\validators\UrlValidator());
 
