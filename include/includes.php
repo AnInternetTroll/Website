@@ -1,4 +1,5 @@
     <meta charset="utf-8">
+    <meta name="theme-color" content="#007bff"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
     <link rel="icon" href="/Website/media/dickbutt_192.png">
