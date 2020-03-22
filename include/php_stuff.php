@@ -34,8 +34,8 @@ fclose($f); //closes ipaddresses.txt for reading and writing
     $parser->addCodeDefinition($builder->build());
     $builder = new JBBCode\CodeDefinitionBuilder('justify', '<div style="text-align: justify;">{param}</div>');
     $parser->addCodeDefinition($builder->build());
-//    $builder = new JBBCode\CodeDefinitionBuilder('size', '<div style="font-size: {option};">{param}</div>');
-//    $builder->setUseOption(true)->setOptionValidator(new \JBBCode\validators\UrlValidator());
+    //    $builder = new JBBCode\CodeDefinitionBuilder('size', '<div style="font-size: {option};">{param}</div>');
+    //    $builder->setUseOption(true)->setOptionValidator(new \JBBCode\validators\UrlValidator());
     $builder = new JBBCode\CodeDefinitionBuilder('quote', '<blockquote>{param}</blockquote>');
     $parser->addCodeDefinition($builder->build());
     $builder = new JBBCode\CodeDefinitionBuilder('code', '<code>{param}</code>');
@@ -56,8 +56,8 @@ fclose($f); //closes ipaddresses.txt for reading and writing
     $parser->addCodeDefinition($builder->build());
     $builder = new JBBCode\CodeDefinitionBuilder('br', '<br />{param}');
     $parser->addCodeDefinition($builder->build());
-//    $builder = new JBBCode\CodeDefinitionBuilder('youtube', '<iframe width="949" height="534" src="https://www.youtube.com/embed/{param}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
-//    $builder->setUseOption(true)->setOptionValidator(new \JBBCode\validators\UrlValidator());
+    //    $builder = new JBBCode\CodeDefinitionBuilder('youtube', '<iframe width="949" height="534" src="https://www.youtube.com/embed/{param}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+    //    $builder->setUseOption(true)->setOptionValidator(new \JBBCode\validators\UrlValidator());
 
 
     $Comment = $_POST['Comment'];

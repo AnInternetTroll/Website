@@ -14,9 +14,7 @@
                     <hr />
                     <h2>Other comments</h2>
                     <div class="comment_section"></div>
-                    <?php
-include "comments.php";
-?>
+                    <?php include "comments.php"; ?>
 <script>
 if ( window.history.replaceState ) {
   window.history.replaceState( null, null, window.location.href );

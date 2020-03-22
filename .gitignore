@@ -7,5 +7,5 @@ comments.php
 discordWebhook.txt
 node_modules
 vendor
-include/jbbcode
-include\vendor\erusev\parsedown
+include/vendor/jbbcode
+include/vendor/erusev/parsedown
