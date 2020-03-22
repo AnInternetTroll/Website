@@ -26,21 +26,24 @@ $hookObject = json_encode([
             "timestamp" => $Time,
 
             // The integer color to be used on the left side of the embed
-            "color" => hexdec( "007bff" )
-            ]
+            "color" => hexdec("007bff")
         ]
-    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
-
-$ch = curl_init();
-
-curl_setopt_array( $ch, [
-    CURLOPT_URL => $url,
-    CURLOPT_POST => true,
-    CURLOPT_POSTFIELDS => $hookObject,
-    CURLOPT_HTTPHEADER => [
-        "Content-Type: application/json"
     ]
-]);
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+foreach ($urlList as $url) {
+    # code...
 
-$response = curl_exec( $ch );
-curl_close( $ch );
+    $ch = curl_init();
+
+    curl_setopt_array($ch, [
+        CURLOPT_URL => $url,
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => $hookObject,
+        CURLOPT_HTTPHEADER => [
+            "Content-Type: application/json"
+        ]
+    ]);
+
+    $response = curl_exec($ch);
+    curl_close($ch);
+}

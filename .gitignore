@@ -6,3 +6,6 @@ naturfag/movie.mp4
 comments.php
 discordWebhook.txt
 node_modules
+vendor
+include/jbbcode
+include\vendor\erusev\parsedown
