@@ -9,3 +9,4 @@ node_modules
 vendor
 include/vendor/jbbcode
 include/vendor/erusev/parsedown
+build/

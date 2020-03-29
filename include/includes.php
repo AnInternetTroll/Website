@@ -30,5 +30,6 @@
 
     <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
     <!-- main.js -->
+    <script src="/include/render.js"></script>
     <script type="text/javascript" src="/Website/include/main.js"></script>
     <script>if (window.module) module = window.module;</script>
