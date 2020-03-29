@@ -24,6 +24,7 @@ html.transition, html.transition *, html.transition *:before, html.transition *:
 .cardyly {
     background-color: var(--card-background-color);
     border-radius: 10px 10px 10px 3px;
+    word-wrap: break-word;
 }
 dark-mode-toggle {
     z-index: -1;
@@ -42,19 +43,21 @@ nav {
     position: absolute;
     top: 38px;
     padding: 5px;
-    background-color: grey;
+    background-color: var(--background-color);
     border-radius: 0px 0px 5px 5px;
+    border-style: solid;
+    border-width: thin;
+    border-color:lightskyblue;
     text-decoration: none;
     z-index: 10;
     display: block;
 }
 #livesearch>a {
-    color: white;
+    color: var(--color);
     text-decoration: none;
 }
 #livesearch > a:hover {
-    background-color: #0f0f0f;
-    padding: 2px;
+    background-color: grey;
 }
 .card-deck .card {
     background-color: var(--card-background-color);
@@ -62,7 +65,17 @@ nav {
 img {
   max-width: 100%;
   height: auto;
-}
-.cardyly{
+    word-wrap: break-word;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    word-wrap: break-word;
     word-wrap: break-word;
 }
