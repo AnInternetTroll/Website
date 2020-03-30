@@ -1,21 +1,21 @@
 {
-    "start_url": "/Website/",
-    "name": "Luca's Website",
-    "manifest_version": 2,
-    "background_color": "#4a4a4d",
-    "theme_color": "#007bff",
-    "short_name": "Luca",
-    "display": "fullscreen",
-    "description": "App for stuff idk.",
-    "lang": "en",
-    "scope": "/Website/",
-    "orientation": "portrait-primary",
-    "dir": "ltr",
-    "icons": [
-        {
-            "src": "/Website/media/dickbutt_192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        }
-    ]
+  "start_url": "/",
+  "name": "Luca's Website",
+  "manifest_version": 2,
+  "background_color": "#4a4a4d",
+  "theme_color": "#007bff",
+  "short_name": "Luca",
+  "display": "fullscreen",
+  "description": "App for stuff idk.",
+  "lang": "en",
+  "scope": "/",
+  "orientation": "portrait-primary",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/media/dickbutt_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
 }

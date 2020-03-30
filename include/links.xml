@@ -2,26 +2,26 @@
 <pages>
   <link>
     <title>Home</title>
-    <url>/Website/home</url>
+    <url>/home</url>
   </link>
   <link>
     <title>About</title>
-    <url>/Website/about/index.php</url>
+    <url>/about/index.php</url>
   </link>
   <link>
     <title>Archive home</title>
-    <url>/Website/archive/index.php</url>
+    <url>/archive/index.php</url>
   </link>
   <link>
     <title>Norsk</title>
-    <url>/Website/archive/Norsk</url>
+    <url>/archive/Norsk</url>
   </link>
   <link>
     <title>Programming</title>
-    <url>/Website/archive/programming</url>
+    <url>/archive/programming</url>
   </link>
   <link>
     <title>Science</title>
-    <url>/Website/archive/Science</url>
+    <url>/archive/Science</url>
   </link>
 </pages>

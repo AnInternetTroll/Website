@@ -1,5 +1,5 @@
 <?php $root = $_SERVER['DOCUMENT_ROOT'];
-include $root . '/Website/include/php_stuff.php';?>
+include $root . '/include/php_stuff.php';?>
 <!DOCTYPE html>
 <html>
 
@@ -9,13 +9,13 @@ include $root . '/Website/include/php_stuff.php';?>
     <meta name="og:description" property="og:description" content="Spraak histories." />
     <meta name="og:locale" property="og:locale" content="en_GB" />
     <meta name="og:site_name" property="og:site_name" content="Norsk" />
-    <meta name="og:image" property="og:image" content="/Website/media/dickbutt.png" />
-    <meta name="article" property="article" content="/Website/archive/Norsk/article.md" />
-    <meta name="og:url" content="/Website/archive/Norsk/" />
+    <meta name="og:image" property="og:image" content="/media/dickbutt.png" />
+    <meta name="article" property="article" content="/archive/Norsk/article.md" />
+    <meta name="og:url" content="/archive/Norsk/" />
 
     <title>Norsk</title>
 
-    <?php include $root . "/Website/include/includes.php";?>
+    <?php include $root . "/include/includes.php";?>
     <!-- -->
 
     <style type="text/css">
@@ -29,7 +29,7 @@ include $root . '/Website/include/php_stuff.php';?>
         font-size: 15px;
     }
     </style>
-<?php include $root . "/Website/include/nav.php";?>
+<?php include $root . "/include/nav.php";?>
     <!-- Article -->
 
 <body>
@@ -38,7 +38,7 @@ include $root . '/Website/include/php_stuff.php';?>
         <div class="row">
             <div class="col-sm-12">
                 <div class='article'>
-                    <?php include $root . "/Website/include/article.php";?>
+                    <?php include $root . "/include/article.php";?>
                     <a href="luca.pdf">
                         <button type="button" class="btn btn-danger">
                             Download PDF
@@ -72,7 +72,7 @@ include $root . '/Website/include/php_stuff.php';?>
                         </ul>
                     </ul>
 
-                <?php include $root . "/Website/include/comments_html.php"?>
+                <?php include $root . "/include/comments_html.php"?>
 
                 </div>
             </div>

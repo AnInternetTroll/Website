@@ -1,7 +1,7 @@
 <?php
 
 // Replace the URL with your own webhook url
-$url = file_get_contents("discordWebhook.txt");
+include 'discordWebhook.php';
 
 $timedate = new DateTime(date("h:i"));
 $Time = $timedate->format(DateTime::ATOM);

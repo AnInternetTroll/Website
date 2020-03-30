@@ -3,10 +3,10 @@
             $current_file_name = $_SERVER['REQUEST_URI'];
             ?>
          <nav class='navbar sticky-top navbar-expand-lg navbar-dark bg-primary'>
-             <a class='navbar-brand' href='/Website/home/'>
-                 <img src='/Website/media/dickbutt.png' width='30' height='30' class='d-inline-block align-top' alt=''>
+             <a class='navbar-brand' href='/home/'>
+                 <img src='/media/dickbutt.png' width='30' height='30' class='d-inline-block align-top' alt=''>
              </a>
-             <a class='navbar-brand' href='/Website/home/'>Luca's website</a>
+             <a class='navbar-brand' href='/home/'>Luca's website</a>
              <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
                  <span class='navbar-toggler-icon'></span>
              </button>
@@ -17,21 +17,21 @@
                             } else {
                                 echo "class='nav-item'";
                             } ?>>
-                         <a class='nav-link' href='/Website/home/'>Home <span class='sr-only'>(current)</span></a>
+                         <a class='nav-link' href='/home/'>Home <span class='sr-only'>(current)</span></a>
                      </li>
                      <li <?php if (strpos($current_file_name, 'about') !== false) {
                                 echo "class='nav-item active'";
                             } else {
                                 echo "class='nav-item'";
                             } ?>>
-                         <a class='nav-link' href='/Website/about/index.php'>About me</a>
+                         <a class='nav-link' href='/about/index.php'>About me</a>
                      </li>
                      <li <?php if (strpos($current_file_name, 'archive') !== false) {
                                 echo "class='nav-item dropdown active'";
                             } else {
                                 echo "class='nav-item dropdown'";
                             } ?>>
-                         <a class='nav-link dropdown-toggle ' href='/Website/archive/index.php' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                         <a class='nav-link dropdown-toggle ' href='/archive/index.php' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                              Archive
                          </a>
                          <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
@@ -39,7 +39,7 @@
                                     echo "class='dropdown-item active'";
                                 } else {
                                     echo "class='dropdown-item'";
-                                } ?> href='/Website/archive/index.php'>Archive home</a>
+                                } ?> href='/archive/index.php'>Archive home</a>
                              <div class='dropdown-divider'></div>
 
                              <?php
@@ -54,9 +54,9 @@
                                         return "<a class='dropdown-item'" . " href='" . $linkToPage . "'>" . $title . "</a> \n";
                                     }
                                 }
-                                $currentDir = scandir($root . "/Website/archive/");
+                                $currentDir = scandir($root . "/archive/");
                                 foreach ($currentDir as $dir) {
-                                    $dir = $root . '/Website/archive/' . $dir;
+                                    $dir = $root . '/archive/' . $dir;
                                     if (is_dir($dir) && $dir != "." && $dir != "..") {
                                         $dir2      = scandir($dir);
                                         $checkProp = array_search("properties.xml", $dir2);
@@ -85,7 +85,7 @@
                      </button>
                      <dark-mode-toggle></dark-mode-toggle>
                  </form>
-                 <form class='form-inline my-2 my-lg-0' action='/Website/include/search.php' method='post' autocomplete="off" id="searchBox">
+                 <form class='form-inline my-2 my-lg-0' action='/include/search.php' method='post' autocomplete="off" id="searchBox">
                      <input class='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' name='findMe' onkeyup="showResult(this.value)">
                      <div id="livesearch" class="livesearch" style="display: none;"></div>
                  </form>

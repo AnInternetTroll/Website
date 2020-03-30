@@ -1,12 +1,12 @@
 <?php $root = $_SERVER['DOCUMENT_ROOT'];
-include $root . '/Website/include/php_stuff.php'; ?>
+include $root . '/include/php_stuff.php'; ?>
 <!DOCTYPE html>
 <html>
 
 <head>
 
     <title>Home</title>
-    <?php include $root . "/Website/include/includes.php"; ?>
+    <?php include $root . "/include/includes.php"; ?>
     <style type="text/css">
         .article {
             position: static;
@@ -14,7 +14,7 @@ include $root . '/Website/include/php_stuff.php'; ?>
             font-size: 15px;
         }
     </style>
-    <?php include $root . "/Website/include/nav.php"; ?>
+    <?php include $root . "/include/nav.php"; ?>
     <!-- Article -->
 
 <body>
@@ -47,14 +47,14 @@ include $root . '/Website/include/php_stuff.php'; ?>
                                 <h5 class="card-title">Programming</h5>
                                 <p class="card-text">This is where I have my programming assigments</p>
                             </div>
-                            <div class="card-footer text-muted"><small>Last updated: Never</small><br /><a href="/Website/archive/programming/" class="btn btn-primary">Go somewhere</a></div>
+                            <div class="card-footer text-muted"><small>Last updated: Never</small><br /><a href="/archive/programming/" class="btn btn-primary">Go somewhere</a></div>
                         </div>
                     </div>
                     <!--Second row-->
 <?php
 $page = "home";
-$currentDir = scandir($root . "/Website/archive/");
-require $root."/Website/include/archive_home.php";
+$currentDir = scandir($root . "/archive/");
+require $root."/include/archive_home.php";
 ?>
                 </div>
             </div>

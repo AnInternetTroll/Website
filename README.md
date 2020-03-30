@@ -4,9 +4,8 @@ This is a repository to document the growth of my hobby. Feel free to take code 
 
 ## Usage
 
-- Clone it in your Server root `git clone https://github.com/AnInternetTroll/Website.git`
-  - You can also download the zip if you don't have git
-- Give it some permissions `sudo chmod -R 0777 Website`
-  - Sidenote, I'm not sure what permission it wants, but comments will not work without this.
-- For developers `npm install` and `composer install` should help with packages, as not all of them are packaged on github to save storage.
-- Done, feel free to use and change it as you like.
+1. Install a webserver service which supports PHP. Apache is a great one and you can read more about it on [this article Ubuntu wrote](https://ubuntu.com/tutorials/install-and-configure-apache#2-installing-apache, "How to install Apache").
+2. Clone it in the server root with `git clone https://github.com/AnInternetTroll/Website.git .`
+3. Install dependencies using `composer install` and `npm install`
+4. You might have to mod the files as sometimes they don't have permissions to write comments, so do that with `sudo chmod -R 0777 .`
+5. Done, feel free to use it, change it and do whatever you want with it

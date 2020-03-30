@@ -2,28 +2,23 @@
     //Depricated for privacy reasons, not like you should even use this
 
     /*
-$file = $root."/Website/ipaddresses.txt"; //turns the text file into a variable
+$file = $root."/ipaddresses.txt"; //turns the text file into a variable
 $f=fopen($file, 'a+'); //opens up the text file for reading and writing
 fwrite($f,"\n--"."Date:".date("l jS \of F Y h:i:s A")."\nIP: ".$_SERVER['REMOTE_ADDR']."\nHOSTNAME: ".gethostbyaddr($_SERVER['REMOTE_ADDR'])."\n"); //writes the IP address to ipaddresses.txt
 fclose($f); //closes ipaddresses.txt for reading and writing
  */
 
-    //BBCode support
-    require_once  $root . "/Website/include/jbbcode/Parser.php";
-    //Markdown support
-    include $root . "/Website/include/Parsedown.php";
-    //HTML to Markdown support
-    //For discord embeds
-    require $root . '/Website/include/vendor/autoload.php';
 
+    require $root. '/vendor/autoload.php';
+    require $root.'/vendor/jbbcode/jbbcode/JBBCode/Parser.php';
+    require $root.'/include/Parsedown.php';
     use League\HTMLToMarkdown\HtmlConverter;
 
     $converter = new HtmlConverter();
-
     $Parsedown = new Parsedown();
     $Parsedown->setSafeMode(true);
-
     $parser = new JBBCode\Parser();
+
     $parser->addCodeDefinitionSet(new JBBCode\DefaultCodeDefinitionSet());
 
     $builder = new JBBCode\CodeDefinitionBuilder('center', '<div style="text-align: center;">{param}</div>');
@@ -74,18 +69,18 @@ fclose($f); //closes ipaddresses.txt for reading and writing
             //Make that markdown for Discord
             $discordEmbedMessage = $converter->convert($Comment);
             //Call the discord webhook
-            include $root . "/Website/include/discord_comments.php";
+            include $root . "/include/discord_comments.php";
         } elseif ($_POST['phraser'] == "Markdown") {
             $Comment = $Parsedown->text($Comment);
             //Make that markdown for Discord
             $discordEmbedMessage = $converter->convert($Comment);
             //Call the discord webhook
-            include $root . "/Website/include/discord_comments.php";
+            include $root . "/include/discord_comments.php";
         } else {
             //Make that markdown for Discord
             $discordEmbedMessage = $converter->convert($Comment);
             //Call the discord webhook
-            include $root . "/Website/include/discord_comments.php";
+            include $root . "/include/discord_comments.php";
             //Not really a lot to do with this
             $Comment = htmlspecialchars($Comment);
         }

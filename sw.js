@@ -1,10 +1,6 @@
 const cacheName = "v1";
 
-const cacheAssets = [
-  "index.html",
-  "/Website/include/main.css",
-  "/Website/include/main.js"
-];
+const cacheAssets = ["index.html", "/include/main.css", "/include/main.js"];
 
 // Call Install Event
 self.addEventListener("install", e => {

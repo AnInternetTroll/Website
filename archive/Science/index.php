@@ -1,6 +1,6 @@
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-include $root . "/Website/include/Parsedown.php";
+include $root . "/include/Parsedown.php";
 $Parsedown = new Parsedown();
 $Parsedown->setSafeMode(true);
 //Commenting code
@@ -24,9 +24,9 @@ if ($_POST) {
     <meta name="og:description" property="og:description" content="Naturfag homework on the subject of Karbonsyrer." />
     <meta name="og:locale" property="og:locale" content="en_GB" />
     <meta name="og:site_name" property="og:site_name" content="Science" />
-    <meta name="og:image" property="og:image" content="/Website/media/dickbutt.png" />
-    <meta name="article" property="article" content="/Website/archive/Science/article.md" />
-    <meta name="og:url" content="/Website/archive/Science/" />
+    <meta name="og:image" property="og:image" content="/media/dickbutt.png" />
+    <meta name="article" property="article" content="/archive/Science/article.md" />
+    <meta name="og:url" content="/archive/Science/" />
 
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -43,7 +43,7 @@ if ($_POST) {
         font-size: 15px;
     }
     </style>
-    <?php include $root . "/Website/include/nav.php";?>
+    <?php include $root . "/include/nav.php";?>
     <!-- Article -->
 
 <body>

@@ -1,19 +1,23 @@
 {
-    "name": "an-internet-troll/website",
-    "description": "A hobby project.",
-    "keywords": ["webssite"],
-    "license": "MIT",
-    "authors": [{
-        "name": "Luca-Matei Pintilie",
-        "email": "lucafulger@gmail.com",
-        "role": "Developer"
-    }],
-    "require": {
-        "erusev/parsedown": "1.0.*",
-        "php": ">=5.3.0",
-        "twbs/bootstrap": "4.3.*",
-        "jbbcode/jbbcode":"1.4.*",
-        "league/html-to-markdown":"^4.9"
-    },
-    "abandoned": false
+  "name": "an-internet-troll/website",
+  "description": "A hobby project.",
+  "keywords": [
+    "webssite"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Luca-Matei Pintilie",
+      "email": "lucafulger@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "erusev/parsedown": "1.0.*",
+    "php": ">=5.3.0",
+    "twbs/bootstrap": "4.3.*",
+    "jbbcode/jbbcode": "1.4.*",
+    "league/html-to-markdown": "^4.9"
+  },
+  "abandoned": false
 }

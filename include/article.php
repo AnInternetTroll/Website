@@ -1,6 +1,7 @@
 <br />
 <?php
-include $root . "/Website/include/table-of-contents.php";
+require $root.'/include/table-of-contents.php';
+
 $Parsedown->setSafeMode(false);
 
 $myfile    = fopen("article.md", "r");

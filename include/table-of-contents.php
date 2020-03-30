@@ -1,4 +1,5 @@
 <?php
+// https://github.com/jenstornell/php-table-of-contents/blob/master/src/table-of-contents.php
 class PHPTableOfContents {
   private $headings;
   private $html;
@@ -31,7 +32,7 @@ class PHPTableOfContents {
 
     foreach($matches[1] as $key => $item) {
       $depth = substr($matches[0][$key], 2, 1) - 2;
-      
+
       if($old_depth > $depth) {
         $out .= "</ol>\n";
       } elseif($old_depth < $depth) {
@@ -78,7 +79,7 @@ class PHPTableOfContents {
     $clean = strtolower($clean);
     $clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
     $clean = trim($clean, $delimiter);
-    
+
     setlocale(LC_ALL, $oldLocale);
     return $clean;
   }
