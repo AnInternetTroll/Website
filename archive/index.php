@@ -34,14 +34,6 @@ include $root . '/include/php_stuff.php'; ?>
                             <div class="card-footer text-muted"><small>Last updated: Never</small><br /><a href="Norsk/" class="btn btn-primary">Go somewhere</a></div>
                         </div>
                         <div class="card mb-3">
-                            <img src="science.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Science</h5>
-                                <p class="card-text">Bunch of sciencey stiff. From anatomy to chemestry to physics, it's all here, if I can be bothered to upload.</p>
-                            </div>
-                            <div class="card-footer text-muted"><small>Last updated: Never</small><br /><a href="Science/" class="btn btn-primary">Go somewhere</a></div>
-                        </div>
-                        <div class="card mb-3">
                             <img src="code.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Programming</h5>
