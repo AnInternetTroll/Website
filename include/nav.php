@@ -24,7 +24,7 @@
                             } else {
                                 echo "class='nav-item'";
                             } ?>>
-                         <a class='nav-link' href='/about/index.php'>About me</a>
+                         <a class='nav-link' href='/about/'>About me</a>
                      </li>
                      <li <?php if (strpos($current_file_name, 'archive') !== false) {
                                 echo "class='nav-item dropdown active'";

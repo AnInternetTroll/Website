@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
   let titlebar = new customTitlebar.Titlebar({
     backgroundColor: customTitlebar.Color.fromHex("#006bff"),
     icon: url.format(
-      "https://github.com/AnInternetTroll/raw/master/media/dickbutt_192.png"
+      "https://github.com/AnInternetTroll/Website/raw/master/media/dickbutt_192.png"
     )
   });
   titlebar.updateMenu(menu);
@@ -80,7 +80,7 @@ menu.append(
         label: "Learn More",
         click: async () => {
           const { shell } = require("electron");
-          await shell.openExternal("https://github.com/AnInternetTroll");
+          await shell.openExternal("https://github.com/AnInternetTroll/Website");
         }
       }
     ]
