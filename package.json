@@ -28,7 +28,7 @@
     "dark-mode-toggle": "^0.5.1",
     "electron-squirrel-startup": "^1.0.0",
     "electron-updater": "^4.2.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.14.4"
   },
   "homepage": "https://github.com/AnInternetTroll/Website#readme",
